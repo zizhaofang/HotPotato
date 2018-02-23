@@ -67,9 +67,7 @@ int main (int argc, char* argv[]) {
 		return 0;
 	}
 
-	cout << "Potato Ringmaster" << endl;
-	cout << "Player = " << num_players << endl;
-	cout << "Hops = " << num_hops << endl;
+	
 
 	//initialize map for recording the topology of net
 	indexnode* id2node = new indexnode[num_players];
@@ -83,6 +81,10 @@ int main (int argc, char* argv[]) {
 	int socket_fd = set_server(&host_info_list, argv[1]);
 	struct sockaddr_storage socket_addr;
 	socklen_t socket_addr_len = sizeof(socket_addr);
+
+	cout << "Potato Ringmaster" << endl;
+	cout << "Player = " << num_players << endl;
+	cout << "Hops = " << num_hops << endl;
 	
 	int max_sd = -1, joined = 0, confirmed = 0, ready = 0, potato_count = 0, activity;
 	while(joined < num_players) {
