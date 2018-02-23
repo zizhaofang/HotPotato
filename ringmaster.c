@@ -9,7 +9,6 @@
 #include "potato.h"
 using namespace std;
 
-#define START_PORT 40000
 
 void closeConnect (indexnode* id2node, int socket_fd, struct addrinfo* host_info_list, int joined, int *acc2recv) {
 	ringnode termination;
