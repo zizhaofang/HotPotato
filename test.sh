@@ -1,4 +1,10 @@
 #! /bin/bash                                                                                                                  
+pkill -9 ringmaster
+pkill -9 player
+
+make clean
+git pull
+make
 
 RINGMASTER_HOSTNAME=vcm-2932.vm.duke.edu
 RINGMASTER_PORT=9876
